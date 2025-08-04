@@ -21,9 +21,45 @@ function showSection(evt, sectionName) {
     }
 }
 
+function populateDivs(response) {
+    var searchResults = document.getElementById('search-results');
+    var count = 0;
+    response.forEach(function(response) {
+      var responseDiv = document.createElement('div');
+      responseDiv.classList.add('beachTemple');
+      if (count%2 == 0) {
+        responseDiv.classList.add('div2');
+      }
+      else {
+        responseDiv.classList.add('div1');
+      }
+
+      var name = document.createElement('h4');
+      name.textContent = response.name;
+      responseDiv.appendChild(name);
+
+      var img = document.createElement('img');
+      img.src = response.imageUrl;
+      responseDiv.appendChild(img);
+
+      var description = document.createElement('p');
+      description.textContent = response.description;
+      responseDiv.appendChild(description);
+
+      var button = document.createElement('button');
+      button.textContent = 'Visit';
+      responseDiv.appendChild(button);
+
+      searchResults.appendChild(responseDiv);
+      count++;
+    });
+}
+
+
 function clearSearch(evt){
     console.log("Function Clear Search");
     document.getElementById("search-input").value = "";
+    document.getElementById("search-results").textContent = "";
     document.getElementById("search-results").style.display = "none";
 }
 
@@ -38,21 +74,26 @@ function getRecommendations(evt){
     xhttp.open("GET", url, true);
     xhttp.responseType = 'json';
     xhttp.onload = function() {
-        console.log("loaded");
-    }
-    
-    xhttp.send();
+        document.getElementById("search-results").textContent = "";
+        if (searchText.includes("countries") || searchText.includes("country")) {
+            response = xhttp.response.countries;
+            response.forEach(function(country) {
+                populateDivs(country.cities);
+            });
+        }
+        else if (searchText.includes("beach")) {
+            response = xhttp.response.beaches;
+            populateDivs(response);
+        }
+        else if (searchText.includes("temple")) {
+            response = xhttp.response.temples;
+            populateDivs(response);
+        }
+        else {
+            clearSearch(evt);
+            return;
+        }
 
-    // if (searchText.includes("countries") || searchText.includes("country")) {
-    //     console.log(countries);
-    // }
-    // else if (searchText.includes("beach")) {
-    //     console.log(beaches);
-    // }
-    // else if (searchText.includes("temple")) {
-    //     console.log(temples);
-    // }
-    // else {
-    //     clearSearch(evt);
-    // }
+    }
+    xhttp.send();
 }

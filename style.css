@@ -97,8 +97,8 @@ section {
     margin-bottom: 80px;
 }
 #search-results{
-    height: 400px;
-    width: 40%;
+    color: #77579d;
+    width: 400px;
     background-color: red;
     float: left;
     background-image: none;
@@ -109,6 +109,30 @@ section {
     z-index: 6;
     top: 60px;
     right: 0pt;
+    button {
+        border-radius: 10px;
+        margin-top: 5px;
+        height: 50px;
+        font-size: 17px;
+        padding: 6px;
+        border: none;
+        cursor: pointer;
+        color: #f2f2f2;
+        background-color: #77579d;
+    }
+    img{
+        width: 350px;
+        border-radius: 50px;
+    }
+    div {
+        padding: 20px;
+    }
+}
+.div1 {
+    background-color: #dbd2e6;
+}
+.div2 {
+    background-color: #b3a0ca;
 }
 #website-intro {
     h1 {
