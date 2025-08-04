@@ -96,6 +96,20 @@ section {
     padding: 20px 50px;
     margin-bottom: 80px;
 }
+#search-results{
+    height: 400px;
+    width: 40%;
+    background-color: red;
+    float: left;
+    background-image: none;
+    background-repeat: repeat;
+    background-attachment: scroll;
+    background-position: 0% 0%;
+    position: absolute;
+    z-index: 6;
+    top: 60px;
+    right: 0pt;
+}
 #website-intro {
     h1 {
         padding: 20px;

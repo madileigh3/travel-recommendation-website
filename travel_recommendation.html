@@ -12,15 +12,18 @@
                 <a class="tablinks" onclick="showSection(event, 'about-us')">About Us</a>
                 <a class="tablinks" onclick="showSection(event, 'contact-us')">Contact Us</a>
                 <div id="search-container">
-                    <form>
-                        <input type="text" placeholder="Enter a destination or keyword" name="search">
-                        <button>Search</button>
-                        <button>Reset</button>
-                    </form>
+                    
+                        <input type="text" placeholder="Enter a destination or keyword" name="search" id="search-input">
+                        <button id="search-button" onClick="getRecommendations(event);return false;">Search</button>
+                        <button id="clear-button" onClick="clearSearch(event);return false;">Clear</button>
+                    
                 </div>
             </div>
         </header>
         <div class="wrapper">
+            <div id="search-results">
+                <p>Test Divs</p>
+            </div>
             <section class="row" id="website-intro" style="display:block">
                 <table style="height:100%;">
                     <tr>
