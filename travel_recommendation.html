@@ -2,121 +2,136 @@
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="style.css">
-        <title>Travel Far</title>
+        <title>Wanderly</title>
     </head>
     <body>
         <header>
-            <div class="topnav row">
-                <div class="navSection">
-                    <p><strong>Madi Hicks</strong><br>
-                       fakeEmail@gmail.com<br>
-                       +1 123.456.7890</></p>
-                </div>
-                <div class="navSection">
-                    <nav id="links">
-                        <a href="#recs">Recommendations</a>
-                        <a href="#projects">Projects</a>
-                        <a href="#skills">Skills</a>
-                        <a href="#aboutMe">About Me</a>
-                    </nav>
+            <div class="topnav">
+                <h3 class="col">Wanderly</h3>
+                <a class="tablinks active" onclick="showSection(event, 'website-intro')">Home</a>
+                <a class="tablinks" onclick="showSection(event, 'about-us')">About Us</a>
+                <a class="tablinks" onclick="showSection(event, 'contact-us')">Contact Us</a>
+                <div id="search-container">
+                    <form>
+                        <input type="text" placeholder="Enter a destination or keyword" name="search">
+                        <button>Search</button>
+                        <button>Reset</button>
+                    </form>
                 </div>
             </div>
         </header>
-        <section class="row" id="aboutMe">
-            <h2>About Me</h2>
-            <div class="col">
-                <p>Hi! My name is Madison, but you can call me Madi or M. <br><br>
-                From a young age, I was fascinated by how things work—taking apart gadgets, tinkering with computers, 
-                and eventually writing my first lines of code in high school. What started as curiosity quickly turned 
-                into a passion, leading me to pursue a degree in computer science.<br><br>
-                College was a time of deep exploration: algorithms, databases, web development, and endless hours of 
-                debugging taught me not just the technical side of engineering, but also patience and persistence. 
-                During this time, internships and side projects gave me hands-on experience building real-world 
-                applications and collaborating with others.<br><br>
-                After graduating, I began my career as a junior developer, contributing to everything from internal 
-                tools to client-facing platforms. Over time, I took on more responsibility—leading small teams, 
-                architecting systems, and mentoring newer engineers. Each role taught me something new, whether it was 
-                how to write cleaner code, work cross-functionally, or build more user-focused products.<br><br>
-                Today, I continue to grow as a software engineer, always staying curious and open to what’s next. 
-                Whether I’m solving a complex technical challenge or helping a teammate succeed, I strive to build 
-                software that makes a positive impact.</p>
-            </div>
-        </section>
-        <section id="skills">
-            <h2>Skills</h2><br>
-            <table>
+        <div class="wrapper">
+            <section class="row" id="website-intro" style="display:block">
+                <table style="height:100%;">
+                    <tr>
+                        <td>
+                            <h1>CIAO</h1>
+                            <h1 id="greet-1">SALUT</h1>
+                            <h1 id="greet-2">NAMASTE</h1>
+                            <h1 id="greet-1">OLÁ</h1>
+                            <h1 id="greet-2">HALLO</h1>
+                        </td>
+                        <td>
+                            <p style="margin-left:100px;">Let Wanderly help you say 'Hello' to the world.<br>
+                                We're a modern travel company dedicated to crafting unforgettable journeys. From curated getaways to off-the-beaten-path adventures, we handle every detail—so you can explore the world with ease, excitement, and confidence.
+                                <br><br>Your next great story starts here...</p>
+                        </td>
+                        </tr>
+                </table>
+            </section>
+            <section id="about-us" style="display:none">
+                <h1 class="section-header">ABOUT US</h1>
+                <p class="section-header">Wanderly is a modern travel company dedicated to crafting unforgettable journeys. From curated getaways to off-the-beaten-path adventures, we handle every detail—so you can explore the world with ease, excitement, and confidence. Your next great story starts here.</p>
+                <table>
                 <tr>
-                    <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/1200px-ISO_C%2B%2B_Logo.svg.png">
-                        <br>C++<br>10 yrs</td>
-                    <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/C_Programming_Language.svg/926px-C_Programming_Language.svg.png">
-                        <br>C<br>6 yrs</td>
-                    <td><img src="https://static.vecteezy.com/system/resources/previews/048/332/150/non_2x/java-programming-language-java-logo-free-png.png">
-                        <br>Java<br>9 yrs</td>
-                    <td><img src="https://groklearning-cdn.com/flatpages/tTEoibqL26cETDXPebr3YD/pythoned.png">
-                        <br>Python<br>5 yrs</td>
+                    <td>
+                        <h1>Ellen Ripley</h1>
+                        <h4>Founder & Chief Safety Officer</h4>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqcj55Oonu8wgYayQFonUdHMxdl3Seifowig&s">
+                        <p>With over 20 years of experience navigating deep space routes, hostile environments, and uncharted territories, Ellen Ripley is the fearless force behind Nostromo Travel Co. After a distinguished career in interstellar logistics and emergency operations, Ripley founded the agency to give travelers peace of mind—especially those venturing a little off-world.<br><br>
+
+Ripley specializes in high-risk, high-reward destinations—think remote exoplanets, derelict ruins, or even just that volcano trek your cousin keeps insisting is "totally safe." Her signature approach blends grit, precision planning, and a deep respect for the unexpected.<br><br>
+
+When she's not coordinating evacuation protocols or personally inspecting the airlocks at one of our lunar resorts, Ripley can be found advocating for travel safety standards that actually mean something.</p>
+                    </td>
+                    <td>
+                        <h1>Jonesy</h1>
+                        <h4>Chief Comfort Officer</h4>
+                        <img src="https://static.wikia.nocookie.net/avp/images/b/b7/Jones.png/revision/latest?cb=20130413105636">
+                        <p>Jonesy brings a calming presence—and a keen sense for danger—to the Wanderly. As our resident Chief Comfort Officer, he specializes in stress reduction, nap optimization, and detecting subtle shifts in cabin pressure long before any alarm goes off.<br><br>
+
+A seasoned survivor of interstellar travel and less-than-ideal passenger manifest situations, Jonesy has an uncanny ability to sniff out trouble (and avoid it entirely). Whether he's curled up in a sunbeam on Gateway Station or dodging air ducts on a derelict ship, Jonesy remains unflappable—and adorably judgmental.<br><br>
+
+His primary responsibility? Ensuring every lounge area, cryo-pod, and drop ship feels just like home. You may not notice him on your journey, but trust us: he’s watching. And if he runs, you should too.</p>
+                    </td>
+                    <td>
+                        <h1>Arthur Dallas</h1>
+                        <h4>Lead Expedition Advisor</h4>
+                        <img src="https://www.avpgalaxy.net/wordpress/wp-content/uploads/2015/05/dallas1.jpg">
+                        <p>Calm under pressure and experienced in navigating both corporate red tape and cosmic unknowns, Dallas serves as the Lead Expedition Advisor at Wanderly. A former commercial towing vessel captain turned elite travel consultant, Dallas specializes in coordinating journeys to remote, high-risk, or high-reward destinations—including those where maps are more suggestions than guidelines.<br><br>
+
+Known for his steady leadership style and dry sense of humor, Dallas helps clients design expeditions with a clear priority: stay alive, stay on course, and don’t poke the strange lifeforms.<br><br>
+
+With deep-space logistics expertise and an aversion to unexplained transmissions, Dallas is your go-to for honest risk assessments, resource planning, and making the tough calls when autopilot just won't cut it.</p>
+                    </td>
                 </tr>
                 <tr>
-                    <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Ada_horizon_green_logo_with_slogan.svg/800px-Ada_horizon_green_logo_with_slogan.svg.png"><br>Ada<br>3 yrs</td>
-                    <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Git_icon.svg/2048px-Git_icon.svg.png">
-                        <br>Git<br>10 yrs</td>
-                    <td><img src="https://sourceengineers.com/img/technologies/googletest-light.png">
-                        <br>Gtest<br>3 yrs</td>
-                    <td><img src="https://www.bdq.cloud/hs-fs/hubfs/Atlassian-vertical-blue@2x-rgb.png?width=401&height=446&name=Atlassian-vertical-blue@2x-rgb.png">
-                        <br>Atlassian<br>8 yrs</td>
-                </tr>
-                <tr>
-                    <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/512px-HTML5_logo_and_wordmark.svg.png">
-                        <br>HTML<br>3 yrs</td>
-                    <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png">
-                        <br>CSS<br>3 yrs</td>
-                    <td><img src="https://logos-world.net/wp-content/uploads/2023/02/JavaScript-Logo.png">
-                        <br>Javascript<br>3 yrs</td>
-                    <td><img src="https://images.vexels.com/media/users/3/140692/isolated/svg/72d1f12edf758d24f5b6db73bac4f297.svg">
-                        <br>Linux<br>7 yrs</td>
+                    <td>
+                        <h1>Ash</h1>
+                        <h4>Director of Data & Bio-Environmental Analysis</h4>
+                        <img src="https://static.wikia.nocookie.net/alienanthology/images/6/62/Alien_Ian_Holm1.jpg/revision/latest?cb=20210323150713">
+                        <p>Ash oversees all data-driven travel design at Nostromo Travel Co., ensuring every itinerary is optimized for biological compatibility, atmospheric stability, and—most importantly—mission success. With unmatched processing power and an unshakable dedication to “company priorities,” Ash crafts travel experiences that are both calculated and cutting-edge.<br><br>
+
+Clients often remark on his calm demeanor, encyclopedic knowledge of planetary ecosystems, and mildly unsettling intensity. While not known for small talk or visible blinking, Ash is a consummate professional who guarantees that every variable—seen or unseen—has been accounted for.<br><br>
+
+Ash was instrumental in developing our "Unknown World Protocols™" and "Adaptive Containment Packages", though he insists these are merely "precautionary."</p>
+                    </td>
+                    <td>
+                        <h1>Dennis Parker</h1>
+                        <h4>Chief Logistics & Systems Officer</h4>
+                        <img src="https://static.wikia.nocookie.net/alienanthology/images/2/23/Alien_Yaphet_Kotto1.jpg/revision/latest?cb=20210323145640">
+                        <p>Parker is the backbone of Nostromo Travel Co.’s operations—keeping ships running, supply chains intact, and clients out of avoidable disasters. With decades of experience maintaining propulsion systems under high-stress conditions (including some very questionable company missions), Parker doesn’t sugarcoat travel plans—he just makes sure they work.<br><br>
+
+Whether it’s fuel calibration for long-haul interplanetary cruises or heat regulation in volcanic trekking pods, Parker brings the grit, know-how, and plain-spoken honesty that travelers trust when the stakes are high. He also personally inspects every vehicle we put clients on—twice—and has a strict “no surprises” policy… unless it’s about hazard pay."</p>
+                    </td>
+                    <td>
+                        <h1>Joan Lambert</h1>
+                        <h4>Lead Navigation Specialist & Risk Assessment Officer</h4>
+                        <img src="https://static.wikia.nocookie.net/alienanthology/images/2/22/Alien_Veronica_Cartwright1.jpg/revision/latest?cb=20210322153104">
+                        <p>With a background in astro-navigation and long-range plotting, Lambert serves as the emotional compass and course-setter for Nostromo Travel Co. Known for her pinpoint accuracy and strong situational awareness, she’s particularly skilled at identifying travel routes that look fine on paper—but come with way too many “unknowns.”<br><br>
+
+Lambert is an advocate for client comfort and psychological preparedness, often pushing back on over-ambitious plans with a refreshing dose of realism. She’s also the architect behind our "Nope Protocol"™—a travel policy designed to halt expeditions the moment things start feeling off. (Yes, we actually listen to her now.)</p>
+                    </td>
                 </tr>
             </table>
-        </section>
-        <section class="row" id="projects">
-            <h2>Projects</h2><br>
-            <table>
-                <tr>
-                    <td><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/560170/header.jpg?t=1741729164">
-                        <br><strong>Shadows of the Empire Re-make</strong><br>Re-created select levels from the class N64 game in the Unity Game Engine</td>
-                    <td><img src="imgs/VR.png">
-                        <br><strong>Journey Through Time</strong><br>Showcased the evolution of technology through the ages using basic VR development tools.</td>
-                    <td><img src="imgs/Stranded.png">
-                        <br><strong>Stranded</strong><br>Created an interactive VR-experience with the goal of helping educate others about schizophrenia.</td>
-                </tr>
-            </table>
-        </section>
-        <section class="row"  id="recs">
-            <h2>Recommendations</h2><br>
-            <table>
-                <tr>
-                    <td>"Madi consistently demonstrates a deep understanding of software development principles and technologies. They write clean, efficient code and are quick to learn new tools and frameworks. Their problem-solving skills have made them a valuable asset in delivering high-quality, scalable solutions under tight deadlines."</td>
-                    <td>"M is a collaborative team member who communicates effectively with both technical and non-technical stakeholders. They contribute positively to team discussions, offer mentorship to junior developers, and are always willing to jump in and help resolve blockers."</td>
-                    <td>"I highly recommend Madison for any software engineering role. She consistently delivered clean, reliable code and collaborated effectively with cross-functional teams. A strong problem-solver and dependable team member, Madison would be a valuable asset to any engineering organization."</td>
-                </tr>
-                <tr>
-                    <td>Madi is a skilled and dependable web developer. During our time working together, she consistently demonstrated strong technical abilities, attention to detail, and a proactive approach to solving problems.<br><strong>-Briony C</strong></td>
-                </tr>
-            </table>
-            <div id="recDiv">
-                <form id="recForm">
-                    <fieldset>
-                        <legend><strong>Leave a Recommendation</strong></legend>
-                        <label for="name"></label><br>
-                        <input type="text" id="name" name="name" placeholder="Name"><br>
-                        <label for="message"></label><br>
-                        <textarea name="message" form="recForm" placeholder="Message"></textarea><br>
-                        <input type="submit" id="submit" onClick="submitRec()">
-                    </fieldset>
-                </form>
-            </div>
-        </section>
+            </section>
+            <section id="contact-us" style="display:none">
+                <h1 class="section-header">CONTACT US</h1>
+                <table>
+                    <tr>
+                        <td >
+                            <h1 class="section-header">We'd love to hear from you!</h1>
+                        </td>
+                        <td>
+                            <form>
+                                <label for="name">Name</label><br>
+                                <input type="text" placeholder="Enter your name" name="name"><br>
+                                <label for="email">Email</label><br>
+                                <input type="text" placeholder="Enter your email" name="email"><br>
+                                <label for="message">Message</label><br>
+                                <textarea name="message" rows="5" cols="70" placeholder="Enter your message"></textarea><br>
+                                <button>Submit</button>
+                            </form>
+                        </td>
+                </table>
+            </section>
+        </div>
         <footer>
-            Thanks for visiting my site!
-            <img src="imgs/home.png">
+            <h5>Find us on social media!</h5><br>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Logo_of_Twitter.svg/2491px-Logo_of_Twitter.svg.png">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Facebook_logo_%28square%29.png/960px-Facebook_logo_%28square%29.png">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/2560px-YouTube_full-color_icon_%282017%29.svg.png">
         </footer>
     </body>
     <script src="travel_recommendation.js"></script>
