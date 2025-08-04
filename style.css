@@ -168,9 +168,12 @@ section {
 }
 #about-us {
     text-align:center;
+    opacity: 1.0;
     img {
         height: 200px;
         margin-left:auto;
+        opacity: 1.0;
+        border-radius: 25px;
     }
     table {
         margin-top: 20px;
